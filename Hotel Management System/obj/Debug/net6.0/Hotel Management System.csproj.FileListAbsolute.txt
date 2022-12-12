@@ -1,0 +1,15 @@
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\bin\Debug\net6.0\Hotel Management System.exe
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\bin\Debug\net6.0\Hotel Management System.deps.json
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\bin\Debug\net6.0\Hotel Management System.runtimeconfig.json
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\bin\Debug\net6.0\Hotel Management System.dll
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\bin\Debug\net6.0\Hotel Management System.pdb
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\Hotel Management System.csproj.AssemblyReference.cache
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\Hotel Management System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\Hotel Management System.AssemblyInfoInputs.cache
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\Hotel Management System.AssemblyInfo.cs
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\Hotel Management System.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\Hotel Management System.dll
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\refint\Hotel Management System.dll
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\Hotel Management System.pdb
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\Hotel Management System.genruntimeconfig.cache
+C:\Users\Dell\Documents\Assignment\1618\Hotel Management System\Hotel Management System\obj\Debug\net6.0\ref\Hotel Management System.dll
