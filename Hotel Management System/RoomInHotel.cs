@@ -72,14 +72,45 @@ namespace Hotel_Management_System
                 }                                                           
             }
         }
-        public void ConfirmRent(RoomInHotel rooms, string name, int time)
+        public List<int> RoomAvailable(RoomInHotel rooms, string request)
         {
-            Console.Write("What is Room You Want to Rent: ");
-            int roomNumber = int.Parse(Console.ReadLine());
+            List<int> roomAvailable = new List<int>();
+            for (int i = 0; i < roomList.Count; i++)
+            {
+                if (string.Compare(request, roomList[i].Type) == 0)
+                {
+                    bool check = CheckStatus(rooms, i);
+                    if (check == true)
+                    {
+                        roomAvailable.Add(i + 1);
+                    }
+                }
+            }
+            return roomAvailable;
+        }
+        
+        public void ConfirmRent(RoomInHotel rooms, string name, int time, string request)
+        {
+            int roomNumber;
+            bool check;
+            do
+            {
+                check = false;
+                Console.Write("What is Room You Want to Rent: ");
+                roomNumber = int.Parse(Console.ReadLine());
+                List<int> RoomCanRent = RoomAvailable(rooms, request);
+                foreach (int i in RoomCanRent)
+                {
+                    if (i == roomNumber)
+                    {
+                        check = true;
+                    }
+                }
+            }
+            while (check == false);
             roomList[roomNumber - 1].Name = name;
             roomList[roomNumber - 1].Time = time;
-
-            Console.WriteLine($"{roomList[roomNumber - 1].Type} Room {roomNumber} is Rented Now By Mr. {roomList[roomNumber-1].Name}");
+            Console.WriteLine($"{roomList[roomNumber - 1].Type} Room {roomNumber} is Rented Now By Mr. {roomList[roomNumber - 1].Name}");
         }
         public void DisplayInfor(RoomInHotel rooms)
         {
@@ -114,12 +145,34 @@ namespace Hotel_Management_System
             return price;
 
         }
+        public bool CheckData(RoomInHotel rooms,int i)
+        {
+            bool check = true;
+            if (roomList[i-1].Name == null)
+            {
+                check = false;
+                Console.WriteLine("No one rent that room!");
+            }
+            return check;
+        }
+        public int CalculateBill(RoomInHotel rooms, int roomNumber)
+        {
+            int bill = roomList[roomNumber - 1].Time * PriceRoom(rooms, roomNumber);
+            return bill;
+        }
         public void DisplayBill(RoomInHotel rooms)
         {
-            Console.Write("Pay for the room: ");
-            int roomNumber = int.Parse(Console.ReadLine());
-            int bill = roomList[roomNumber-1].Time * PriceRoom(rooms, roomNumber);
-            Console.WriteLine($"You will cost {bill}$ for rented {roomList[roomNumber-1].Type} room in {roomList[roomNumber-1].Time} days");
+            int roomNumber;
+            bool check;
+            do
+            {
+                check = true;
+                Console.Write("Pay for the room: ");
+                roomNumber = int.Parse(Console.ReadLine());
+                check = CheckData(rooms, roomNumber);
+            } while (check == false);
+            int bill = CalculateBill(rooms, roomNumber);
+            Console.WriteLine($"You costed {bill}$ for rented {roomList[roomNumber-1].Type} room for {roomList[roomNumber-1].Time} days");
             roomList[roomNumber - 1].Name = null;
         }
     }

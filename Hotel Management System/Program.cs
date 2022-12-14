@@ -21,7 +21,7 @@
                         break;
                     case 2:                       
                         room.CheckRoom(room, customer.Request);
-                        room.ConfirmRent(room, customer.Name, customer.Time);
+                        room.ConfirmRent(room, customer.Name, customer.Time, customer.Request);
                         break;
                     case 3:
                         room.DisplayInfor(room);
@@ -30,10 +30,10 @@
                         room.DisplayBill(room);
                         break;
                     case 5:
-                        Console.WriteLine("Thanks for using");
+                        Console.WriteLine("Thanks for using!");
                         break;
                     default:
-                        Console.WriteLine("Errnor!");
+                        Console.WriteLine("Error!");
                         break;
                 }
             } while (choice != 5);    
